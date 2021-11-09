@@ -6,3 +6,17 @@ This repository will contain maps created in R, I will start by producing some g
  > Greater London Authority > Satatistical GIS Boundary Files for London
 
 https://data.london.gov.uk/dataset/statistical-gis-boundary-files-london
+
+
+The different GIS boundaries provide the following level of aggregation for London region maps: 
+
+- Output Area (OA) 2011,
+
+- Lower Super Output Area (LSOA) 2004 and 2011,
+
+- Middle Super Output Area (MSOA) 2004 and 2011,
+
+- London Wards (two files: City of London merged into single area and split into seperate wards). There are separate download file for 2014 & 2018 boundaries.
+
+- London Boroughs
+
