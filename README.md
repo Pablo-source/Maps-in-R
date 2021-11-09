@@ -1,7 +1,6 @@
 # Maps-in-R
-Different ways of plotting maps using R
 
-This repository will contain maps created in R, I will start by producing some general country level maps using ggplot2.
+This repository will contain maps created in R, I will start by producing some general country level maps using ggplot2 and sf packages.
 
 Besides, I will use this repository to draw a set of specific London maps. As an exercise on how to use the London statistical GIS boundaries provided by the Greater London Authoprity website: 
 
