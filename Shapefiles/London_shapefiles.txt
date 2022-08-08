@@ -1,0 +1,10 @@
+List of shapefiles for Lonodn region
+
+This folder contains a range of key GIS boundary files for ESRI and Map Info covering Greater London.
+The folder includes:
+- Output Area (OA) 2011,
+- Lower Super Output Area (LSOA) 2004 and 2011,
+- Middle Super Output Area (MSOA) 2004 and 2011,
+- London Wards (two files: City of London merged into single area and split into seperate wards). There are separate download file for 2014 & 2018 boundaries.
+- London Boroughs
+Note: The OA to MSOA boundaries have been generalised to reduce file size/loading time.
