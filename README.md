@@ -15,7 +15,11 @@ The Open Geography portal from the Office for National Statistics (ONS) provides
 
 https://geoportal.statistics.gov.uk/
 
-### Greater London Authority > Satatistical GIS Boundary Files for London
+### The London Datastore 
+
+The London Datastore is  a free and open data-sharing portal  where anyone can access data relating to the capital.  Whether you’re a citizen, business owner, researcher or developer, the site provides over 700 datasets to help you understand the city and develop solutions to London’s problems. 
+
+Greater London Authority > Satatistical GIS Boundary Files for London
 
 https://data.london.gov.uk/dataset/statistical-gis-boundary-files-london
 
