@@ -5,7 +5,7 @@ This repository will contain maps created in R, I will start by producing some g
 Besides, I will use this repository to draw a set of specific London maps. As an exercise on how to use the London statistical GIS boundaries provided by the Greater London Authoprity website: 
 
 
-## Shapeflies folder
+## Shapefiles folder
 
 This folder contains all shapefiles required to build maps for cities and countries
 
