@@ -2,5 +2,28 @@
 
 The Open Geography portal from the Office for National Statistics (ONS) provides free and open access to the definitive source of geographic products, web applications, story maps, services and APIs. All content is available under the Open Government Licence v3.0, except where otherwise stated.
 
+From The Open Geography portal, navigate to Boundaries top menu: 
+
+1. Then select Boundaries > Health Boundaries, to display all Health boundaries available: 
+
+Link to all health boundaries available: 
+
+https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=name&tags=all(BDY_HLT)
+
+
+2. You can choose to download the following set of NHS Geographical boundaries: 
+
+- Cancer Alliances
+- Clinical Commissioning Groups (CCGs)
+- Covid Infection Survey Geography
+- Integrated Care Boards (ICBs)
+- Local Health Boards
+- Locations
+- NHS England (Region)
+- NHS England (Region, Local Office)
+- Public Health England Centres
+- Public Health England Regions
+- Strategic Clinical Networks
+- Sustainability and Transformation Partnerships
 
 [Open Geography portal]<https://geoportal.statistics.gov.uk/>
