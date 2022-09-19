@@ -36,7 +36,7 @@ The different GIS boundaries provide the following level of aggregation for Lond
 
 - London Boroughs
 
-## Data folder
+## NHS data for CCG maps
 
 ### CCG Outcomes Indicator Set - March 2022
 
