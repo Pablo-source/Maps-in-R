@@ -36,6 +36,8 @@ The different GIS boundaries provide the following level of aggregation for Lond
 
 - London Boroughs
 
+## Data folder
+
 ### CCG Outcomes Indicator Set - March 2022
 
 The indicators aim to provide clear, comparative information for Clinical Commissioning Groups (CCGs) and Health and Wellbeing Boards (HWBs) about the quality of health services commissioned by CCGs and, as far as possible, the associated health outcomes.
