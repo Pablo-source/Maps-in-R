@@ -15,7 +15,7 @@ The Open Geography portal from the Office for National Statistics (ONS) provides
 
 https://geoportal.statistics.gov.uk/
 
-From the Open Geography Portal website, you can download CCG Shape files navigating to Boundaries top page menu, then selecting Health Boundaries section. In there choose Shapefile option to download zipped file containing all necessary files to create a CCG map. You can then merge some indicators data to populate this shape file.  
+From the Open Geography Portal website, you can download CCG Shape files navigating to Boundaries top page menu, then selecting Health Boundaries section. In there choose Shapefile option to download zipped file containing all necessary files to create a CCG map. You can then merge some indicators data to populate this shape file. To plot maps using  SF and GGPLOT packages in R, you would need all files included in the unzipped Shape file folder, not just the .sh file. It is advised to read all .sh files from the original unzipped folder on your local folder.
 
 ### The London Datastore 
 
