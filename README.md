@@ -15,6 +15,8 @@ The Open Geography portal from the Office for National Statistics (ONS) provides
 
 https://geoportal.statistics.gov.uk/
 
+From the Open Geography Portal website, you can download CCG Shape files navigating to Boundaries top page menu, then selecting Health Boundaries section. In there choose Shapefile option to download zipped file containing all necessary files to create a CCG map. You can then merge some indicators data to populate this shape file.  
+
 ### The London Datastore 
 
 The London Datastore is  a free and open data-sharing portal  where anyone can access data relating to the capital.  Whether you’re a citizen, business owner, researcher or developer, the site provides over 700 datasets to help you understand the city and develop solutions to London’s problems. 
