@@ -150,7 +150,7 @@ head(mapdata_coord)
 
 Myocardial_map <- mapdata_coord %>% 
                   ggplot() +
-                  aes(fill = indicator_value) +
+                  aes(fill = indicator_value) + 
                   geom_sf() +
                   scale_fill_gradientn(colours = rev(grDevices::topo.colors(10)), name = NULL) +
                   labs(title = "CCG OIS Indicator 1.17 - Record of stage of cancer at diagnosis",
@@ -159,6 +159,23 @@ Myocardial_map <- mapdata_coord %>%
 Myocardial_map
 
 
+# We could choose blue hue color palettes from grDevices package
+# Apply blue color palette to CCG map from grDecives package
+# scale_fill_distiller(palette = "RdPu")
+# scale_fill_distiller(palette = "Blues") to inclue a blue colour palette
 
+# Or as this instance I choose default sequential color 
+# The map is  colored using the qsec continuous variable :
+# Using sequential color
+# aes(colour = qsec)
+
+Myocardial_map_blues <- mapdata_coord %>% 
+                        ggplot(color=qsec)+
+                        aes(fill = indicator_value) +
+                        geom_sf() +
+                        labs(title = "CCG OIS Indicator 1.17 - Record of stage of cancer at diagnosis",
+                             subtitle = "Percentage of new cases of cancer for which a valid stage is recorded at the time of diagnosis,(95% CI)",
+                             caption = "Data source: NHS Digital National Disease Registration Service (NDRS)")
+Myocardial_map_blues
 
 
