@@ -1,3 +1,7 @@
+![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)
+![GitHub all releases](https://img.shields.io/github/downloads/Pablo-source/Targets_pipelines_howto/total?label=Downloads&style=flat-square)
+![GitHub language count](https://img.shields.io/github/languages/count/Pablo-source/Targets_pipelines_howto)
+
 # Maps-in-R
 
 This repository will contain maps created in R, I will start by producing some general country level maps using ggplot2 and sf packages.
