@@ -8,6 +8,16 @@ This repository will contain maps created in R, I will start by producing some g
 
 Besides, I will use this repository to draw a set of specific London maps. As an exercise on how to use the London statistical GIS boundaries provided by the Greater London Authoprity website: 
 
+## City Maps
+
+Taking inspiration from the 30 Day Map Challenge movement. I will start creating several city maps, exploring the different methods they explain and show in the meain repository: https://github.com/tjukanovt/30DayMapChallenge
+
+This is the first City map I have created using osmdata and sf packages: 
+
+### City of Valencia, in Spain. 
+
+![Valencia_metropolitan_area ](https://user-images.githubusercontent.com/76554081/224561937-ccaefdc4-1ef1-49df-9e4b-9c124623e8bb.png)
+
 
 ## Shapefiles folder
 
