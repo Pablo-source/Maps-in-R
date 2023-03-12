@@ -10,7 +10,7 @@ Besides, I will use this repository to draw a set of specific London maps. As an
 
 ## City Maps
 
-Taking inspiration from the 30 Day Map Challenge movement. I will start creating several city maps, exploring the different methods they explain and show in the meain repository: https://github.com/tjukanovt/30DayMapChallenge
+Taking inspiration from the #30DayMapChallenge. I will start creating several city maps, exploring the different methods they explain and show in the meain repository: https://github.com/tjukanovt/30DayMapChallenge
 
 This is the first City map I have created using osmdata and sf packages, you will find all the details to produce the map below in this script: https://github.com/Pablo-source/Maps-in-R/blob/main/City_maps/VALENCIA%20Street%20map_print.R 
 
