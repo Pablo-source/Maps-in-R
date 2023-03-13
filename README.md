@@ -14,7 +14,7 @@ Taking inspiration from the #30DayMapChallenge. I will start creating several ci
 
 This is the first City map I have created using osmdata and sf packages, you will find all the details to produce the map below in this script: https://github.com/Pablo-source/Maps-in-R/blob/main/City_maps/VALENCIA%20Street%20map_print.R 
 
-### City of Valencia, in Spain. 
+### City of Valencia, Spain. 
 
 ![Valencia_metropolitan_area ](https://user-images.githubusercontent.com/76554081/224561937-ccaefdc4-1ef1-49df-9e4b-9c124623e8bb.png)
 
