@@ -1,3 +1,5 @@
 This project documentation has been done using Quarto
 
-As new features are included to the existing city maps, new sections weill be added to the rendered html output file
+As new features are included to the existing city maps, new sections weill be added to the rendered html output file.
+
+To obtain the interactive HTML quarto ouput file, download the HTML file created and open it on any browser. Then you will be able to use the interactive features built in on any Quarto document.
