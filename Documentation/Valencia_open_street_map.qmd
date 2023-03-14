@@ -1,0 +1,121 @@
+---
+title: "OpenStreet maps"
+author: "Pablo Leon"
+date: "5/22/2021"
+format: 
+  html:
+    code-fold: true
+---
+
+## Open street maps
+
+This is a project to build maps with global open access mapping data using OSMDATA package in R.
+
+<https://docs.ropensci.org/osmdata/articles/osmdata.html>.
+
+From the package website, they explain that working with open access map data, ensures transparent data provenance and ownership, allowing anyone to contribute, encouraging democratic decision making and citizen science.
+
+## Working with vector data
+
+Unlike the OpenStreetMap package <https://github.com/ifellows/ROSM>, which facilitates the download of raster files, **osmdata** provides access to the vector data underlying OSM
+
+## Install and load OSMDATA package from CRAN
+
+To start working with Open OpenStreetMap package, install it from CRAN
+
+```{r install OpenStreetMap}
+# install.packages("osmdata",dependencies = TRUE)
+```
+
+And then load it the usual way
+
+```{r load osmdata}
+#| echo: false
+library(osmdata)
+```
+
+Load also extra libraries for data wrangling and to create plots
+
+```{r load required libraries}
+pacman::p_load(here,tidyverse,osmdata,sf,showtext)
+```
+
+
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+## Creating maps using getbb
+
+When building maps using OpenStreetMap, we can think about them in similar terms as ggplot2 plots, in the sense we build them step by step, adding one layer at a time to display the required information on top of the initial map of the region we want to create a map from.
+
+Having selected the city we want to plot, then we use getbb() function to obtain a bounding box for a given place name. In this instance I will plot the city of Valencia in Spain. 
+
+getbb() function will provide me with the latitude and longitude coordinates that define Valencia in our map
+
+```{r}
+getbb("Valencia Spain")
+
+```
+
+
+## 1. Select your reagion and add one feature
+
+Now that I want to plot a map of Valencia I need to choose which features do I want to plot. Each feature is defined by a key and each key is sub-divided into further values. 
+
+For example, if I want to start plotting roads or highways into my map, I need to first identify how roads are defined in osmdata package. For that we use available_features() function to choose different roads or transportation routes defined in the map
+
+```{r display available features}
+available_features()
+```
+From the above list of features I can see "highway" as available key, so now I need to know which specific values are linked to that key. For tha I will use
+available_tags() function, to find out which values are related to the key "highway"
+
+```{r get values tags for highway key}
+available_tags("highway")
+```
+
+As I want to start by plotting the main roads in the city of Valencia, i will choose a handful of the above tags: motorway, primary, secondary, tertiary,residential,living_street, unclassified.
+
+## 2. Choosing elements for map first layer
+
+We name each layer with the key and values we want to plot in the map. So for this first example, I want to see several types of roads in the region of Valencia
+
+```{r Map layer 01 roads}
+# MAP LAYER 01: roads  
+roads <- getbb("Valencia Spain") %>% 
+         opq(timeout =  3500) %>% 
+         add_osm_feature(key = "highway",
+                        value = c("motorway","primary","secondary","tertiary",
+                                  "residential","living_street","unclassified")) %>% 
+         osmdata_sf()
+roads
+```
+
+## 3. Initial Valencia city map showing roads and highways
+
+Using ggplot2, we use the sf cartographic object we queried from the OpenMap API, mapping sevral sf objects via ggplot2 and geom_sf() functions. 
+
+Also, It is in this step where we make use of getbb("Valencia Spain") function, to ensure the features we match the specific latitude and longitude  of the city we want to plot. 
+
+We have created so far just one geom_sf() object, we include it within the ggplot() function alongside the lat and long coordinated of Valencia.
+
+Prior to producing the final map, we define the color palette for each new feature
+
+```{r map color palette}
+road_color <- '#000000'
+coastline_color <- '#000000'
+```
+
+Then we can combine all previous scripts to create our first map
+
+```{r Valencia road map}
+Valencia_roads_map <- ggplot() +
+                  geom_sf(data = roads$osm_lines,
+                          inherit.aes = FALSE,
+                          color = road_color) +
+                  coord_sf(xlim = c(-0.4325512, -0.2725205),
+                           ylim = c(39.2784496, 39.5666089),
+                           expand = FALSE)
+Valencia_roads_map
+```
+
