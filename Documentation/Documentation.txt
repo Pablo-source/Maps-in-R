@@ -1,0 +1,3 @@
+This project documentation has been done using Quarto
+
+As new features are included to the existing city maps, new sections weill be added to the rendered html output file
