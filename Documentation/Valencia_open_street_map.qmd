@@ -1,7 +1,7 @@
 ---
 title: "OpenStreet maps"
 author: "Pablo Leon"
-date: "5/22/2021"
+date: "3/14/2023"
 format: 
   html:
     code-fold: true
@@ -70,7 +70,7 @@ Now that I want to plot a map of Valencia I need to choose which features do I w
 
 For example, if I want to start plotting roads or highways into my map, I need to first identify how roads are defined in osmdata package. For that we use available_features() function to choose different roads or transportation routes defined in the map
 
-```{r display available features}
+```{r display features}
 available_features()
 ```
 From the above list of features I can see "highway" as available key, so now I need to know which specific values are linked to that key. For tha I will use
@@ -97,7 +97,9 @@ roads <- getbb("Valencia Spain") %>%
 roads
 ```
 
-## 3. Initial Valencia city map showing roads and highways
+## 3. Maps
+
+### 3.1 Initial Valencia city map showing roads and highways
 
 Using ggplot2, we use the sf cartographic object we queried from the OpenMap API, mapping sevral sf objects via ggplot2 and geom_sf() functions. 
 
@@ -107,7 +109,8 @@ We have created so far just one geom_sf() object, we include it within the ggplo
 
 Prior to producing the final map, we define the color palette for each new feature
 
-```{r map color palette}
+```{r map  roads color palette}
+# Remember to enclose Hexadecimal colors in apostrophes 
 road_color <- '#000000'
 coastline_color <- '#000000'
 ```
@@ -118,10 +121,123 @@ Then we can combine all previous scripts to create our first map
 Valencia_roads_map <- ggplot() +
                   geom_sf(data = roads$osm_lines,
                           inherit.aes = FALSE,
-                          color = road_color) +
+                          color = road_color
+                            ) +
                   coord_sf(xlim = c(-0.4325512, -0.2725205),
                            ylim = c(39.2784496, 39.5666089),
                            expand = FALSE)
 Valencia_roads_map
 ```
 
+### 3.2 Valencia city map including roads and coastline  
+
+We now include a new feature to our map, this time we want to map the coastline and natural water features int he Valencia region. 
+
+We start by choosing the relevant key feature labelled as  "natural" and browse different water related tags to be included in our map. 
+
+```{r display available features}
+available_tags("natural")
+```
+At a first glance, we can use those tabs related to coastal geological features such as "bay","water","beach","wetland" and "dune". Let's create a new object to include all these tags.
+
+```{r Valencia coastline map}
+Vlc_coastline <- getbb("Valencia Spain") %>% 
+                         opq(timeout =  3500) %>% 
+                         add_osm_feature(key = "natural",
+                                        value = c("bay","water","beach","wetland","dune")) %>% 
+                         osmdata_sf()
+Vlc_coastline
+```
+
+We can create now a new map that will combine both coastline and road features 
+
+```{r map coast color palette}
+road_color <- '#1E212B'
+coastline_color <- '#1E212B'
+```
+
+This is a new map that will combine roads and coastline layers 
+
+```{r Valencia coastline roads map}
+Valencia_map2 <- ggplot() +
+                  # roads
+                  geom_sf(data = roads$osm_lines,
+                          inherit.aes = FALSE,
+                          color = road_color
+                            ) +
+                  # coastline
+                  geom_sf(data = Vlc_coastline$osm_lines,
+                          inherit.aes = FALSE,
+                          color = coastline_color
+                            ) +
+                  coord_sf(xlim = c(-0.4325512, -0.2725205),
+                           ylim = c(39.2784496, 39.5666089),
+                           expand = FALSE)
+Valencia_map2
+```
+
+
+### 3.3 Initial Valencia city map including Water features
+
+We want to include the see and different water bodies such as reservoirs and natural lagoons in the map, in the South part of the City of Valencia ther is a big lagoon called "La Albufera" we want to display it in hues of blue colours.
+
+
+
+```{r Valencia water and river areas map}
+Vlc_water <- getbb("Valencia Spain") %>% 
+                         opq(timeout =  3500) %>% 
+                         add_osm_feature(key = "water") %>% 
+                         osmdata_sf()
+
+Vlc_sea <- getbb("Valencia Spain") %>% 
+                         opq(timeout =  3500) %>% 
+                         add_osm_feature(key = "waterway",
+                                         value = "river") %>% 
+                         osmdata_sf()
+
+```
+
+Then we can add these two new layers of water features to the existing map
+
+Define first two new colours for water features
+
+```{r map river color palette}
+water_color <- '#0066CC'
+waterway_color <- '#99CCFF'
+```
+
+
+Now we can produce a new map with the new water layers added to it. 
+
+```{r Valencia coastline}
+Valencia_map3 <- ggplot() +
+                  # roads
+                  geom_sf(data = roads$osm_lines,
+                          inherit.aes = FALSE,
+                          color = road_color
+                            ) +
+                  # coastline
+                  geom_sf(data = Vlc_coastline$osm_lines,
+                          inherit.aes = FALSE,
+                          color = coastline_color
+                            ) +
+                  # water
+      geom_sf(data = Vlc_water$osm_lines,
+                          inherit.aes = FALSE,
+                          color = water_color
+                            ) +
+                  # waterways
+                        geom_sf(data = Vlc_sea$osm_lines,
+                          inherit.aes = FALSE,
+                          color = waterway_color
+                            ) +
+                  # Center coordinates for Valencia city
+                  coord_sf(xlim = c(-0.4325512, -0.2725205),
+                           ylim = c(39.2784496, 39.5666089),
+                           expand = FALSE)
+Valencia_map3
+```
+
+## 4. Theme and save output map  
+
+The last stage of this open street tutoarial is to tidy up the map created, and apply some theme() functions to the ggplot2 in order to clean up the output and get a printing ready image as .png file, so we can print it and frame it. 
