@@ -7,6 +7,12 @@ format:
     code-fold: true
 ---
 
+```{r markdown custom style, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE,
+                      dpi = 180, fig.width = 8, fig.height = 5)
+library(tidyverse)
+```
+
 ## Open street maps
 
 This is a project to build maps with global open access mapping data using OSMDATA package in R.
