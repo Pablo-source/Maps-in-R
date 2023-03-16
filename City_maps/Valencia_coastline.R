@@ -31,7 +31,8 @@ help(getbb)
 # min        max
 # x -0.4325512 -0.2725205
 # y 39.2784496 39.5666089
-
+road_color <- '#000000'
+  
 Valencia_roads <- ggplot() +
                   geom_sf(data = roads$osm_lines,
                           inherit.aes = FALSE,
