@@ -119,6 +119,9 @@ width = 20
 height = 40
 
 here()
+
+File_name <- 
+  
 # Save Map as .png file
 # Output size can be tailored to print out as a poster. Current setup width 20 cm and height 40 cm
 ggsave(here::here(paste(name,".png")),
