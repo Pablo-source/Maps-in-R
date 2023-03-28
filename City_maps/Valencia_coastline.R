@@ -44,7 +44,7 @@ Valencia_roads
 
 
 # MAP LAYER 02: waterfront 
-# We want to add waterfrom to the map 
+# We want to add Valencia waterfront to map 
 available_features()
 # We want natural features from the list below 
 # [166] "nat_name"                    "natural"                     "noexit"    
@@ -120,9 +120,9 @@ height = 40
 
 here()
 
-File_name <- 
+File_name <- paste0(name,".png")
   
 # Save Map as .png file
 # Output size can be tailored to print out as a poster. Current setup width 20 cm and height 40 cm
-ggsave(here::here(paste(name,".png")),
+ggsave(here::here(File_name),
        device = "png", width = width, height = height, units = "cm", dpi = "retina", bg = "transparent")
