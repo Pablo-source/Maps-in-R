@@ -1,8 +1,8 @@
 # CITY STREET MAPS SERIES
 
-# City map 01: Valencia, spain.
+# City map 01: Valencia, spain. 
 
-# R Script: VALENCIA Street map.R
+# R Script: VALENCIA Street map_print.R
 
 # R Tutorial to build City maps based oh OSM Data
 # Load required packages
@@ -68,7 +68,6 @@ font_add_google("Barlow", "barlow")
 # This is the new map with all features
 vlc_city <- ggplot() +
   
-  geom_sf(data = river_water$osm_lines,inherit.aes = FALSE,color = river_color, size = .3, alpha = .6) +
   geom_sf(data = streets$osm_lines,inherit.aes = FALSE,color = street_color, size = .5, alpha = .6) +
   geom_sf(data = residential$osm_lines,inherit.aes = FALSE,color = street_color, size = .3, alpha = .6) +
 

@@ -18,6 +18,10 @@ This is the first City map I have created using osmdata and sf packages, you wil
 
 ![Valencia_metropolitan_area ](https://user-images.githubusercontent.com/76554081/224561937-ccaefdc4-1ef1-49df-9e4b-9c124623e8bb.png)
 
+Including some water features (rivers and waterways)
+
+![Valencia_metropolitan_area_rivers](https://user-images.githubusercontent.com/76554081/225693404-96f3403d-df91-442b-a4dd-2069c84dc202.png)
+
 
 ## Shapefiles folder
 

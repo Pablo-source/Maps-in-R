@@ -1,6 +1,6 @@
 # CITY STREET MAPS SERIES
 
-# City map 01: Valencia, Spain. 
+# City map 01: Valencia, Spain.  
 # New feature: Coastline
 
 # Valencia_coastline.R
@@ -87,10 +87,10 @@ Valencia_map
 
 # Plot map with title and removing some features 
 # theme(axis.text)
-# Map colours
+# Hexadecimal Map colours
 road_color <- '#000000'
 coastline_color <- '#000000'
-font_color <-'#4169E1' 
+font_color <-'#4682B4' 
     
 vlc_map_formatted <- ggplot() +
   # Include open map features
@@ -113,7 +113,7 @@ vlc_map_formatted <- ggplot() +
 
 vlc_map_formatted
 
-# Prepare output plot
+# PNG output image file name and size (cm)
 name <-"Valencia_coastline"
 width = 20
 height = 40
