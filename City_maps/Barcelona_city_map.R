@@ -137,6 +137,7 @@ bcn_map_print <- ggplot() +
   ) 
 
 bcn_map_print
+
 # PNG output image file name and size (cm) 
 name <-"Barcelona_city_map"
 width = 20
