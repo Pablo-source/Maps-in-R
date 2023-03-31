@@ -12,7 +12,7 @@ available_features()
 # 2.2 Tags within features 
 available_tags("highway")
 
-# 3. Within the highway feature we choose several taga
+# 3. Within the highway feature we choose several tags
 # These are the coordinates we need for our Valencia map
 
 # MAP LAYER 01: roads  
