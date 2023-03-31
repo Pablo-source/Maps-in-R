@@ -22,6 +22,10 @@ Including some water features (rivers and waterways)
 
 ![Valencia_metropolitan_area_rivers](https://user-images.githubusercontent.com/76554081/225693404-96f3403d-df91-442b-a4dd-2069c84dc202.png)
 
+This map displays l'Albufera, the largest freshwater lagoon in Spain, spanning more than 2,800 hectares, located south of Valencia city.
+
+![Valencia_Albufera_feshwater_lagoon_](https://user-images.githubusercontent.com/76554081/228175442-b80cf4ac-a7d2-4bd6-9076-e66ce76b7388.png)
+
 
 ## Shapefiles folder
 
