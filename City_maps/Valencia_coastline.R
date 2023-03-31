@@ -113,7 +113,7 @@ vlc_map_formatted <- ggplot() +
 
 vlc_map_formatted
 
-# PNG output image file name and size (cm)
+# PNG output image file name and size (cm) 
 name <-"Valencia_coastline"
 width = 20
 height = 40
