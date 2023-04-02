@@ -1,0 +1,3 @@
+This is a folder including several design iterations leading to the final city map for each of hte cities plotted as example
+
+- It will include previous dessign iterations
