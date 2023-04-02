@@ -18,7 +18,7 @@ This is the first City map I have created using osmdata and sf packages, you wil
 
 ![Valencia_metropolitan_area ](https://user-images.githubusercontent.com/76554081/224561937-ccaefdc4-1ef1-49df-9e4b-9c124623e8bb.png)
 
-Including some water features (rivers and waterways). This map below displays l'Albufera, the largest freshwater lagoon in Spain, spanning more than 2,800 hectares, located south of Valencia city. See R script "Valencia_open_street_map.R"
+Including some water features (rivers and waterways). This map below displays l'Albufera, the largest freshwater lagoon in Spain, spanning more than 2,800 hectares, located south of Valencia city. See R script "Valencia_open_street_map.R" in City_maps folder.
 
 ![Valencia_open_street_map_](https://user-images.githubusercontent.com/76554081/229374232-db755fcf-da35-42e3-953f-0efba0d146d7.png)
 
