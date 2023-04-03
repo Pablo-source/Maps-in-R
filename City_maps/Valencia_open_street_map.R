@@ -6,9 +6,7 @@
 # This is a small tutorial on how to build a city map of using osmdata package of the city of Valencia, Spain. 
 
 # 1. Install and load required packages
-
 # install.packages("osmdata",dependencies = TRUE)
-library(osmdata)
 
 # 1.1 Load remaining libraries 
 if(!require(pacman)){
